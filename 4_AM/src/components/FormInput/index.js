@@ -3,10 +3,10 @@ import { Input, Label } from "./styles"
 
 // TODO: Create a FormInput component that used the styled component Input
 // and whatever extra labels or text-based components and containers you wish!
-const FormInput = () => (
+const FormInput = ({ label, update }) => (
   <div>
-    <Label> hi </Label>
-    <Input />
+    <Label> {label} </Label>
+    <Input onChange={update} />
   </div>
 )
 
