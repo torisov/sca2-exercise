@@ -16,9 +16,29 @@ const factorial = function(num) {
   return num * factorial(num - 1);
 }
 
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]
+
 const announceDate = function() {
   // TODO - write a function which returns the current date in the following format:
   // "Today's date is January 7th, 2016. It is eleven thirty-seven in the morning."
+  const d = new Date()
+  const year = d.getFullYear()
+  const month = months[d.getMonth()]
+  const day = d.getDate()
+  return `Today's date is ${month} ${day}th, ${year}`
 }
 
 const shiftRight = function(str, num) {
@@ -52,7 +72,4 @@ assert([2, 3][0] === 2)
 assert(reverse("3df") === "fd3")
 assert(factorial(5) == 120)
 
-console.log(factorial(5))
-
-
-console.log(reverse("3df"))
+console.log(announceDate())
