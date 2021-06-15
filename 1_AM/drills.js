@@ -11,6 +11,9 @@ const reverse = function(str) {
 const factorial = function(num) {
   // TODO - write a function which returns the factorial of a positive integer
   // For example, 5! = 5 * 4 * 3 * 2 * 1 = 120
+  if (num < 0) return;
+  if (num < 2) return 1;
+  return num * factorial(num - 1);
 }
 
 const announceDate = function() {
@@ -46,7 +49,10 @@ const unzip = function(arr) {
 assert(1 < 2)
 assert(1 + 2 == 3)
 assert([2, 3][0] === 2)
-
 assert(reverse("3df") === "fd3")
+assert(factorial(5) == 120)
+
+console.log(factorial(5))
+
 
 console.log(reverse("3df"))
