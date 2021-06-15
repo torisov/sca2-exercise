@@ -4,7 +4,9 @@ const assert = require("assert")
 
 const reverse = function(str) {
   // TODO - write a function which reverses the string
+  return str.split("").reverse().join("");
 }
+
 
 const factorial = function(num) {
   // TODO - write a function which returns the factorial of a positive integer
@@ -44,4 +46,7 @@ const unzip = function(arr) {
 assert(1 < 2)
 assert(1 + 2 == 3)
 assert([2, 3][0] === 2)
-// assert(reverse("3df") === "fd3")
+
+assert(reverse("3df") === "fd3")
+
+console.log(reverse("3df"))
